@@ -1,1 +1,32 @@
-switch1 a layer 2 switch 
+Bash
+
+vlan 100
+ name developer
+vlan 200
+ name hr
+exit
+
+# Assign PC ports (example: f0/1-2 for v100, f0/3-4 for v200)
+int range f0/1-2
+ sw mode access
+ sw access vlan 100
+int range f0/1-2
+ sw mode access
+ sw access vlan 200
+int range f0/3-4
+
+# Trunk port to Router (example: f0/1)
+int f0/1
+ sw mode trunk
+On the Router (Sub-interfaces):
+
+Bash
+
+int f0/0.100
+ encapsulation dot1Q 100
+ ip add 192.168.11.1 255.255.255.0
+int f0/0.200
+ encapsulation dot1Q 200
+ ip add 192.168.12.1 255.255.255.0
+int f0/0
+ no shut
