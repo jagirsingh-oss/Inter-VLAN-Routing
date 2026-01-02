@@ -1,23 +1,25 @@
-# Create Vlan's and name them:
+# Create Vlan and name them:
 
-vlan 100
- name developer
-vlan 200
- name hr
-exit
+Switch (config)#vlan 100
+Switch (config-vlan)#name Developer
+Switch (config-vlan)#vlan 200
+Switch (config-vlan) #name HR
+Switch (config-vlan)#exit
 
-# Assign PC ports (example: f0/1-2 for v100, f0/3-4 for v200)
+# Assign PC ports :
 
-int range f0/1-2
- sw mode access
- sw access vlan 100
+Switch (config)#int range fa0/1-2
+Switch (config-if-range) #switchport mode access
+Switch (config-if-range)#switchport access vlan 100
+Switch (config-if-range) #exit
 
-int range f0/3-4
- sw mode access
- sw access vlan 200
+Switch (config)#int range fa0/3-4
+Switch (config-if-range) #sw mode access
+Switch (config-if-range)#sw access vlan 200
 
-# Trunk port to Router (example: f0/1)
+# Trunk port to Router:
 
-int f0/1
- sw mode trunk
- no shutdown
+Switch (config)#int fa0/5
+Switch (config-if) #sw mode trunk     // Note: sw is short form of switchport
+Switch (config-if)#no shutdown
+Switch (config-if) #exit
