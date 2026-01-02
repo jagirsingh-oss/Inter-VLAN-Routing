@@ -1,2 +1,73 @@
-switch2 
-ljhjgg  djhkfvhuf hda asjiufhiufhkhs nnihiuawhiasugkxkshscs siuhfo
+SW-L3> enable
+SW-L3# configure terminal
+
+SW-L3(config)# ip routing
+// Enable Layer 3 routing (Global Config)
+
+! =========================
+! VLAN CREATION (Global Config)
+! =========================
+SW-L3(config)# vlan 100
+SW-L3(config-vlan)# name Developer
+SW-L3(config-vlan)# exit
+
+SW-L3(config)# vlan 200
+SW-L3(config-vlan)# name HR
+SW-L3(config-vlan)# exit
+
+SW-L3(config)# vlan 300
+SW-L3(config-vlan)# name Security
+SW-L3(config-vlan)# exit
+
+! =========================
+! ACCESS PORT ASSIGNMENTS
+! =========================
+
+! VLAN 100 - Developer (PC1, PC2)
+SW-L3(config)# interface range fastEthernet0/1-2
+SW-L3(config-if-range)# switchport mode access
+SW-L3(config-if-range)# switchport access vlan 100
+SW-L3(config-if-range)# no shutdown
+SW-L3(config-if-range)# exit
+
+! VLAN 200 - HR (PC3, PC4)
+SW-L3(config)# interface range fastEthernet0/3-4
+SW-L3(config-if-range)# SW-L3port mode access
+SW-L3(config-if-range)# switchport access vlan 200
+SW-L3(config-if-range)# no shutdown
+SW-L3(config-if-range)# exit
+
+! VLAN 300 - Security (PC5, PC6)
+SW-L3(config)# interface range fastEthernet0/5-6
+SW-L3(config-if-range)# switchport mode access
+SW-L3(config-if-range)# switchport access vlan 300
+SW-L3(config-if-range)# no shutdown
+SW-L3(config-if-range)# exit
+
+! =========================
+! VLAN INTERFACES (SVI / GATEWAYS)
+! =========================
+
+! Gateway for VLAN 100
+SW-L3(config)# interface vlan 100
+SW-L3(config-if)# ip address 192.168.13.1 255.255.255.0
+SW-L3(config-if)# no shutdown
+SW-L3(config-if)# exit
+
+! Gateway for VLAN 200
+SW-L3(config)# interface vlan 200
+SW-L3(config-if)# ip address 192.168.14.1 255.255.255.0
+SW-L3(config-if)# no shutdown
+SW-L3(config-if)# exit
+
+! Gateway for VLAN 300
+SW-L3(config)# interface vlan 300
+SW-L3(config-if)# ip address 192.168.15.1 255.255.255.0
+SW-L3(config-if)# no shutdown
+SW-L3(config-if)# exit
+
+! =========================
+! SAVE CONFIGURATION
+! =========================
+SW-L3(config)# end
+SW-L3# write memory
