@@ -1,21 +1,25 @@
 On the Router (Sub-interfaces):
 
-int f0/0.100
- encapsulation dot1Q 100
- ip add 192.168.11.1 255.255.255.0
-int f0/0.200
- encapsulation dot1Q 200
- ip add 192.168.12.1 255.255.255.0
-int f0/0
- no shutdown
+Router>en
+Router#conf t
 
-Provide IP address from Router to Sw_L3:
+Router (config)#int fa0/0.100
+Router (config-subif) #encapsulation dot1Q 100
+Router (config-subif)#ip address 192.168.11.1 255.255.255.0
+Router (config-subif)#exit
 
-int fa0/1
- ip add 10.0.0.2 255.255.255.252
- no shut
+Router (config)#int fa0/0.200
+Router (config-subif) #encapsulation dotlQ 200
+Router (config-subif)#ip address 192.168.12.1 255.255.255.0
+Router (config-subif)#exit
 
-# Route to MLS VLANs
-ip route 192.168.13.0 255.255.255.0 10.0.0.2
-ip route 192.168.14.0 255.255.255.0 10.0.0.2
-ip route 192.168.15.0 255.255.255.0 10.0.0.2
+Router (config)#int fa0/1
+Router (config-if)#ip address 10.10.10.2 255.255.255.252
+Router (config-if) #no shutdown
+Router (config-if)# exit
+
+# Route to MultiLayer Switch VLANs
+
+Router (config)# ip route 192.168.13.0 255.255.255.0 10.0.0.2
+Router (config)# ip route 192.168.14.0 255.255.255.0 10.0.0.2
+Router (config)# ip route 192.168.15.0 255.255.255.0 10.0.0.2
