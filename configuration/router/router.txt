@@ -1,4 +1,4 @@
-On the Router (Sub-interfaces):
+## On the Router (Sub-interfaces):
 
 int f0/0.100
  encapsulation dot1Q 100
