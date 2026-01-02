@@ -9,6 +9,8 @@ int f0/0.200
 int f0/0
  no shutdown
 
+Provide IP address from Router to Sw_L3:
+
 int fa0/1
  ip add 10.0.0.1 255.255.255.252
  no shut
