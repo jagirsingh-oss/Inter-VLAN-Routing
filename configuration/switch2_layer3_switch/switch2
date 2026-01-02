@@ -76,7 +76,9 @@ Sw_L3(config-if)# exit
 
 Provide Routes:
 
-#conf t
+router(conf)# int fa0/7
+router(conf-if)# ip route 192.168.11.0 255.255.255.0 10.10.10.2
+router(conf-if)# ip route 192.168.12.0 255.255.255.0 10.10.10.2
 
 ! =========================
 ! SAVE CONFIGURATION
