@@ -1,1 +1,13 @@
+>en
+#conf t
+(config)# int fa0/0
+(conf-if)#no shutdown
+(conf-if)#int f0/0
+(conf-if)#ip add 10.0.0.1 255.255.255.252
+(conf-if)#no shutdown
 
+**Route to MLS VLANs**
+
+(conf-if)#ip route 192.168.13.0 255.255.255.0 10.0.0.2
+(conf-if)#ip route 192.168.14.0 255.255.255.0 10.0.0.2
+(conf-if)#ip route 192.168.15.0 255.255.255.0 10.0.0.2
