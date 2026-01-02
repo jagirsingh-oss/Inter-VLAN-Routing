@@ -1,1 +1,68 @@
+🔹 VLAN 100 – PC1 & PC2
+PC1 Configuration
+
+Go to PC1
+
+Click Desktop
+
+Open IP Configuration
+
+Enter the following:
+
+Default Gateway: 192.168.11.1
+
+IPv4 Address: 192.168.11.5
+
+Subnet Mask: Automatically generated
+
+PC2 Configuration
+
+Go to PC2
+
+Click Desktop
+
+Open IP Configuration
+
+Enter the following:
+
+Default Gateway: 192.168.11.1
+
+IPv4 Address: 192.168.11.6
+
+Subnet Mask: Automatically generated
+
+🔹 VLAN 200 – PC3 & PC4
+PC3 Configuration
+
+Go to PC3
+
+Click Desktop
+
+Open IP Configuration
+
+Enter the following:
+
+Default Gateway: 192.168.12.1
+
+IPv4 Address: 192.168.12.5
+
+Subnet Mask: Automatically generated
+
+PC4 Configuration
+
+Go to PC4
+
+Click Desktop
+
+Open IP Configuration
+
+Enter the following:
+
+Default Gateway: 192.168.12.1
+
+IPv4 Address: 192.168.12.6
+
+Subnet Mask: Automatically generated
+
+✅ Each PC has a unique IP address within the same VLAN.
 
