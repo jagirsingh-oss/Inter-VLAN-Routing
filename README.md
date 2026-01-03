@@ -106,7 +106,7 @@ Side A (RoaS)                    Side B (SVI)
 
 2. **Open the topology file**
    - Launch Cisco Packet Tracer
-   - Open `topology.pkt` from the repository
+   - Open `inter-VLAN-Routing.pkt` from the repository
 
 3. **Verify the configuration**
    - All devices should be pre-configured
@@ -161,7 +161,7 @@ By exploring this project, you will understand:
 
 **Router Sub-interface (VLAN 100)**
 ```cisco
-interface GigabitEthernet0/0.100
+interface fa0/0.100
 encapsulation dot1Q 100
 ip address 192.168.11.1 255.255.255.0
 ```
