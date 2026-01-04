@@ -1,10 +1,11 @@
-🔹 VLAN 100 – PC1 & PC2
-PC1 Configuration
+🔹 VLAN 100 – PC5 & PC6 (Developer)
 
-Go to PC1
+Network: 192.168.13.0/24
 
+PC5 Configuration
+
+Go to PC5
 Click Desktop
-
 Open IP Configuration
 
 Enter the following:
@@ -15,12 +16,10 @@ IPv4 Address: 192.168.13.5
 
 Subnet Mask: Automatically generated
 
-PC2 Configuration
+PC6 Configuration
 
-Go to PC2
-
+Go to PC6
 Click Desktop
-
 Open IP Configuration
 
 Enter the following:
@@ -31,13 +30,14 @@ IPv4 Address: 192.168.13.6
 
 Subnet Mask: Automatically generated
 
-🔹 VLAN 200 – PC3 & PC4
-PC3 Configuration
+🔹 VLAN 200 – PC7 & PC8 (HR)
 
-Go to PC3
+Network: 192.168.14.0/24
 
+PC7 Configuration
+
+Go to PC7
 Click Desktop
-
 Open IP Configuration
 
 Enter the following:
@@ -48,12 +48,10 @@ IPv4 Address: 192.168.14.5
 
 Subnet Mask: Automatically generated
 
-PC4 Configuration
+PC8 Configuration
 
-Go to PC4
-
+Go to PC8
 Click Desktop
-
 Open IP Configuration
 
 Enter the following:
@@ -64,15 +62,14 @@ IPv4 Address: 192.168.14.6
 
 Subnet Mask: Automatically generated
 
-✅ Each PC has a unique IP address within the same VLAN.
+🔹 VLAN 300 – PC9 & PC10 (Security)
 
-🔹 VLAN 300 – PC5 & PC6
-PC5 Configuration
+Network: 192.168.15.0/24
 
-Go to PC5
+PC9 Configuration
 
+Go to PC9
 Click Desktop
-
 Open IP Configuration
 
 Enter the following:
@@ -83,12 +80,10 @@ IPv4 Address: 192.168.15.5
 
 Subnet Mask: Automatically generated
 
-PC6 Configuration
+PC10 Configuration
 
-Go to PC6
-
+Go to PC10
 Click Desktop
-
 Open IP Configuration
 
 Enter the following:
@@ -98,12 +93,3 @@ Default Gateway: 192.168.15.1
 IPv4 Address: 192.168.15.6
 
 Subnet Mask: Automatically generated
-
-📊 Summary Table (Good for Project Report)
-VLAN	PC	IP Address	Default Gateway
-100	PC1	192.168.13.5	192.168.13.1
-100	PC2	192.168.13.6	192.168.13.1
-200	PC3	192.168.14.5	192.168.14.1
-200	PC4	192.168.14.6	192.168.14.1
-300	PC5	192.168.15.5	192.168.15.1
-300	PC6	192.168.15.6	192.168.15.1
