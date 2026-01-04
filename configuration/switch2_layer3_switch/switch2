@@ -22,21 +22,21 @@ Sw_L3(config-vlan)# exit
 ! ACCESS PORT ASSIGNMENTS
 ! =========================
 
-! VLAN 100 - Developer (PC1, PC2)
+! VLAN 100 - Developer (PC5, PC6)
 Sw_L3(config)# interface range fastEthernet0/1-2
 Sw_L3(config-if-range)# switchport mode access
 Sw_L3(config-if-range)# switchport access vlan 100
 Sw_L3(config-if-range)# no shutdown
 Sw_L3(config-if-range)# exit
 
-! VLAN 200 - HR (PC3, PC4)
+! VLAN 200 - HR (PC7, PC8)
 Sw_L3(config)# interface range fastEthernet0/3-4
 Sw_L3(config-if-range)# Sw_L3port mode access
 Sw_L3(config-if-range)# switchport access vlan 200
 Sw_L3(config-if-range)# no shutdown
 Sw_L3(config-if-range)# exit
 
-! VLAN 300 - Security (PC5, PC6)
+! VLAN 300 - Security (PC9, PC10)
 Sw_L3(config)# interface range fastEthernet0/5-6
 Sw_L3(config-if-range)# switchport mode access
 Sw_L3(config-if-range)# switchport access vlan 300
