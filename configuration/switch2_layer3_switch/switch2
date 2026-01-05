@@ -31,7 +31,7 @@ Sw_L3(config-if-range)# exit
 
 ! VLAN 200 - HR (PC7, PC8)
 Sw_L3(config)# interface range fastEthernet0/3-4
-Sw_L3(config-if-range)# Sw_L3port mode access
+Sw_L3(config-if-range)# switchport mode access
 Sw_L3(config-if-range)# switchport access vlan 200
 Sw_L3(config-if-range)# no shutdown
 Sw_L3(config-if-range)# exit
