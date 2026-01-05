@@ -1,3 +1,5 @@
+![full topology](/Diagram/final_project.png)
+
 # Inter-VLAN Routing Project (RoaS & SVI)
 
 A comprehensive network topology demonstration using **Cisco Packet Tracer** that showcases both traditional Router-on-a-Stick (RoaS) and modern Switch Virtual Interface (SVI) configurations for inter-VLAN routing.
