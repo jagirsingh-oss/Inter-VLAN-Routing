@@ -101,7 +101,7 @@ Side A (RoaS)                    Side B (SVI)
 
 1. **Clone or download this repository**
    ```bash
-   git clone https://github.com/yourusername/intervlan-routing-project.git
+   git clone https://github.com/jagirsingh-oss/Inter-VLAN-Routing.git
    ```
 
 2. **Open the topology file**
@@ -120,20 +120,20 @@ Side A (RoaS)                    Side B (SVI)
 
 Test inter-VLAN routing within the same side:
 ```
-PC0 (VLAN 100, Side A) → PC1 (VLAN 200, Side A)
-ping 192.168.12.10
+PC1 (VLAN 100, Side A) → PC3 (VLAN 200, Side A)
+ping 192.168.12.5
 ```
 
 Test routing between sides:
 ```
-PC0 (VLAN 100, Side A) → PC4 (VLAN 300, Side B)
+PC0 (VLAN 100, Side A) → PC9 (VLAN 300, Side B)
 ping 192.168.15.5
 ```
 
 Test all connectivity:
 ```
-PC2 (VLAN 100, Side B) → PC1 (VLAN 200, Side A)
-ping 192.168.12.10
+PC5 (VLAN 100, Side B) → PC1 (VLAN 100, Side A)
+ping 192.168.13.5
 ```
 
 ### Expected Results
@@ -179,7 +179,7 @@ no shutdown
 ip route 192.168.13.0 255.255.255.0 10.0.0.2
 ```
 
-For complete configurations, refer to `commands.txt`.
+For complete configurations, refer to `configuration.txt`.
 
 ---
 
